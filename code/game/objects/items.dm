@@ -1133,7 +1133,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/g
 
 /obj/item/proc/do_pickup_animation(atom/target)
 
-	if(!config.item_animations_enabled)
+	if(!CONFIG_GET(flag/item_animations_enabled))
 		return
 
 	if(!isturf(loc) || !target)
@@ -1174,7 +1174,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /mutable_appearance, mutable_appearance('icons/g
 
 /obj/item/proc/do_drop_animation(atom/moving_from)
 
-	if(!config.item_animations_enabled)
+	if(!CONFIG_GET(flag/item_animations_enabled))
 		return
 
 	if(!isturf(loc) || !istype(moving_from))
